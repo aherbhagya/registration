@@ -1,0 +1,57 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Penginapan{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Penginapan",
+		"Manage and Grow Your Hotel",
+		 			"/assets/punia_website/images/retail/retail-hero.jpg", False) }}
+
+
+	{{ feature({
+			"title": "Point of Sale",
+			"desc": "A has touch-friendly Point of Sales interface which is linked to billing, payments and Inventory. You can manage settings like Currency, Cash / Bank Account, Taxes, and Terms and Conditions individually for each location. POS feature also works offline and syncs when you have internet.",
+			"img": "/assets/punia_website/images/retail/point-of-sale.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Inventory",
+			"desc": "Easily manage multiple inventory locations. When the stock goes below threshold quantity - Automatically raise material requests, send purchase orders to suppliers and record purchase receipts. Batches, serial numbers, stock valuation and automated inventory accounting help you be on top of the stock.",
+			"img": "/assets/punia_website/images/retail/stock.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Multi-store",
+			"desc": "Your stores at multiple locations will run cohesively. You can manage your operations remotely, communicate between different branches and analyze real-time reports across all branches.",
+			"img": "/assets/punia_website/images/retail/multi-store.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Billing and Accounting",
+			"desc": "Billing and receivables tracking helps you stay on top of your finances. Inventory linked accounting helps you get the performance of each product. Get the insights about your top selling products and make more informed decisions.",
+			"img": "/assets/punia_website/images/retail/invoice.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Sales and Purchase",
+			"desc": "You  can track communication with your Leads or Customers. Keep engaging with them by sending newsletter once in awhile and send specific Quotations when they are ready to order. Keep track of items to buy by raising Material Requests, send Purchase Orders to your suppliers and enter Purchase Receipts when you receive material.",
+			"img": "/assets/punia_website/images/industries/purchase-order.png"
+		})
+	}}
+
+
+	{{ testimonial("Konrad Schwitter, OfficeOne", "The main problem of SMEs is Transaction Recording, Financial Recording and How to Marketing The features of Punia Online are very complete from Recording Data, Managing Business Processes and Generating Financial Statements Financial Statements are Measurements to know the development of our business. ", "/assets/punia_website/images/testimonials/konrad.png") }}
+
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+
+{% endblock %}

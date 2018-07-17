@@ -1,0 +1,34 @@
+<style>
+	.navbar-default .navbar-nav > li > a{
+		font-family: Poppins, sans-serif;
+		font-size: 14px;
+	}
+	.dropdown-menu li a{
+		font-family: Poppins, sans-serif;
+	}
+	.dropdown-menu li a:hover{
+		font-family: Poppins, sans-serif;
+		background-color: #fafafa;
+	}
+</style>
+
+<nav class="navbar navbar-default navbar-main" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand ellipsis" href="/{{ url_prefix }}">
+				<span>
+					<!-- <img class='navbar-icon' src='/assets/punia_website/img/punia-logo.png' /> -->
+					Digital Prizm
+				</span>
+			</a>
+			<a class="pull-right toggle-sidebar visible-xs">
+				<i class="octicon octicon-three-bars"></i>
+			</a>
+		</div>
+		<div class="hidden-xs">
+			{% block navbar_items %}
+			{% include "templates/includes/navbar/navbar_items.html" %}
+			{% endblock %}
+		</div>
+	</div>
+</nav>

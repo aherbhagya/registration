@@ -1,0 +1,53 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Pertanian{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Pertanian",
+		"Fresh and Healthy, Like your Farm Produce", 			"/assets/punia_website/images/agriculture/agri-desk-hero.png", False) }}
+
+	{{ feature({
+			"title": "Land Unit",
+			"desc": "Accurately track and divide land units for micro-management.",
+			"img": "/assets/punia_website/images/agriculture/land-unit.png"
+		})
+	}}
+
+	{{ feature({
+            "title": "Crop",
+			"desc": "Maintain the crop details along with the list of tasks associated with growing the crop.",
+			"img": "/assets/punia_website/images/agriculture/crop.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Crop Cycle",
+			"desc": "Track progress of your agricultural activities with expected calendar of activities.",
+			"img": "/assets/punia_website/images/agriculture/crop-cycle-gantt.png"
+		})
+	}}
+
+
+	{{ feature({
+			"title": "Soil Analysis",
+			"desc": "Keep track of the overall health of your farm with plant, water, and soil analysis.",
+			"img": "/assets/punia_website/images/agriculture/soil-texture.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Disease Management and Control",
+			"desc": "Protect your crops from virus and pests. Maintain a list of remedies for common dieases which affect your produce.",
+			"img": "/assets/punia_website/images/agriculture/disease.png"
+		})
+	}}
+
+	{{ testimonial("Gladwyn Lewis", "The main problem of SMEs is Transaction Recording, Financial Recording and How to Marketing The features of Punia Online are very complete from Recording Data, Managing Business Processes and Generating Financial Statements Financial Statements are Measuring Tools for Our Business Development.", "/assets/punia_website/images/testimonials/gladwynlewis.jpg") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+{% endblock %}

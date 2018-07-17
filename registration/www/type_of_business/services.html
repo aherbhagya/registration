@@ -1,0 +1,63 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Jasa{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Jasa",
+		"Manage and Grow Your Firm",
+		 			"/assets/punia_website/images/services/services-hero.png", False) }}
+
+	{{ feature({
+			"title": "Projects and Timesheets",
+			"desc": "All projects are linked to Tasks, Timesheets, Expenses, Purchases, Budgets so you get a full view of your activities. Billing and Payroll is also deeply tied to projects making it easier for you to tie everything together.",
+			"img": "/assets/punia_website/images/services/projects.png"
+		})
+	}}
+
+
+	{{ feature({
+			"title": "Billing and Invoicing",
+			"desc": "Billing and receivables tracking helps you stay
+							on top of your finances. Project based accountings helps you get the
+							profitability of each project on your fingertip.",
+			"img": "/assets/punia_website/images/services/invoice.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "HR, Leave and Payroll",
+			"desc": "Your employees can apply for leaves and claim expenses directly through website. All of this is seamlessly integrated with your payroll and accounting, also helps you manage recruiting, appraisals, trainings and much more.",
+			"img": "/assets/punia_website/images/services/hr.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "CRM and Sales",
+			"desc": "With a fully integrated sales management system, you can track Leads,
+							Opportunities, send Quotes, manage Orders and fulfilment.
+							You can set alerts and send email directly from the system so that
+							you can close more deals.",
+			"img": "/assets/punia_website/images/industries/sales-analytics.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Helpdesk and Support",
+			"desc": "By linking your incoming support emails, you can keep track
+							of open issues across projects and make sure your customers are happy
+							by answering on time. You can also create help articles and build
+							a support portal that will make your customers get what
+							they need even faster.",
+			"img": "/assets/punia_website/images/services/support.png"
+		})
+	}}
+
+	{{ testimonial("Zel Ortiz", "Permasalahan Utama UKM adalah Pencatatan Transaksi, Pencatatan Keuangan dan Bagaimana Pemasaran. Fitur pada Punia Online sangat lengkap mulai dari Mencatat Data, Mengelola Proses Bisnis dan Menghasilkan Laporan Keuangan. Laporan Keuangan adalah Alat Ukur mengetahui Perkembangan usaha kita.", "/assets/punia_website/images/testimonials/zel-ortiz.png") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+{% endblock %}

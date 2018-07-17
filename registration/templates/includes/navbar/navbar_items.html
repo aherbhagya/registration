@@ -1,0 +1,46 @@
+	{% set top_bar_items = [
+	{"label": "Type of business", "child_items":[
+		{"label": "Services", "url": "/type_of_business/services","right": 1},
+		{"label": "Production", "url": "/type_of_business/production","right": 1},
+		{"label": "Retail", "url": "/type_of_business/retail","right": 1},
+		{"label": "Wholesaler", "url": "/type_of_business/wholesaler","right": 1},
+		{"label": "Cooperative", "url": "/type_of_business/cooperative","right": 1},
+		{"label": "Education", "url": "/type_of_business/education","right": 1},
+		{"label": "Agriculture", "url": "/type_of_business/agriculture","right": 1},
+		{"label": "Clinic", "url": "/type_of_business/clinic","right": 1},
+		{"label": "Restaurant", "url": "/type_of_business/restaurant","right": 1},
+		{"label": "Lodging", "url": "/type_of_business/lodging","right": 1},
+		{"label": "Nonprofit", "url": "/type_of_business/non-profit","right": 1}
+	], "right":1},
+	{"label": "Price", "url": "/pricing", "right":1},
+	{"label": "Blog", "url": "/blog", "right": 1},
+	{"label": "Community", "child_items":[
+		{"label": "Testimonials", "url": "/reviews", "right":1},
+		{"label": "MSMEs", "url": "/MSMEs","right": 1},
+		{"label": "Community", "url": "/Community","right": 1},
+		{"label": "Partners", "url": "/Partners","right": 1},
+	], "right":1},
+	{"label": "Help", "child_items":[
+		{"label": "Hints", "url": "/manual","right": 1},
+		{"label": "About Punia", "url": "/about","right": 1},
+		{"label": "Registration", "url": "/pricing","right": 1},
+	], "right":1},
+] %}
+
+{% if top_bar_items -%}
+<ul class="nav navbar-nav navbar-left">
+	{%- for page in top_bar_items -%}
+		{% if not page.parent_label and not page.right -%}
+			{% include "templates/includes/navbar/navbar_link.html" %}
+		{%- endif -%}
+	{%- endfor %}
+</ul>
+{%- endif %}
+<ul class="nav navbar-nav navbar-right">
+	{%- for page in top_bar_items -%}
+		{% if not page.parent_label and page.right -%}
+			{% include "templates/includes/navbar/navbar_link.html" %}
+		{%- endif -%}
+	{%- endfor %}
+	{% include "templates/includes/navbar/navbar_login.html" %}
+</ul>

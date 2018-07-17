@@ -1,0 +1,54 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Manufaktur{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Manufaktur",
+		"Manage and Grow Your Manufacturing Unit", 			"/assets/punia_website/images/manufacturing/manufacturing-hero.png", False) }}
+
+	{{ feature({
+			"title": "Bill of Materials",
+			"desc": "Maintain the list of all materials and operations that are required in making your finished product. Assign cost to each material and get insights of the total cost of production. Be on top of the materials required during production in real time.",
+			"img": "/assets/punia_website/images/manufacturing/BOM.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Production Orders",
+			"desc": "Track the orders for production floor, automatically track material movements via interlinks with production orders, bill of materials and inventory. Track the progress with timesheets and record successful production by registering finished goods.",
+			"img": "/assets/punia_website/images/manufacturing/Production_Order.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Inventory Management",
+			"desc": "Easily manage multiple inventory locations. Track inventory levels per warehouse and update based on manual inspection. Batches, serial numbers, stock valuation and automated inventory accounting help you be on top of stock.",
+			"img": "/assets/punia_website/images/manufacturing/Stock_Summary.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "HR, Leave and Payroll",
+			"desc": "Your employees can apply for leaves and claim expenses directly through website. All of this is seamlessly integrated with your payroll and accounting, also helps you manage recruiting, appraisals, trainings and much more.",
+			"img": "/assets/punia_website/images/services/hr.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Sales + Purchase Management",
+			"desc": "Make purchase requests for all materials required for production. Send automatically to concerned suppliers. Manage inventory of finished goods at the end of production and automatically link it to sales and accounting.",
+			"img": "/assets/punia_website/images/industries/purchase-order.png"
+		})
+	}}
+
+
+	{{ testimonial("Sonal Ramnathkar", "Permasalahan Utama UKM adalah Pencatatan Transaksi, Pencatatan Keuangan dan Bagaimana Pemasaran. Fitur pada Punia Online sangat lengkap mulai dari Mencatat Data, Mengelola Proses Bisnis dan Menghasilkan Laporan Keuangan. Laporan Keuangan adalah Alat Ukur mengetahui Perkembangan usaha kita.", "/assets/punia_website/images/testimonials/sonal.jpg")	}}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% macro render_plan(gambar, plan_name, paid_plan, period, users, emails, space, price, warna) %}
+	{% if paid_plan %}
+		<div class='col-sm-3'>
+	{% else %}
+		<div class='col-sm-4 col-sm-offset-4'>
+	{% endif %}
+		<div class = 'plan' data-plan-name = '{{plan_name}}'>
+			<div class = 'top-section plan-head {{color}}'>
+				<img src = "assets/punia_website/img/{{image}}" style = "height: 70px; width: auto;">
+				<p> Packages </p>
+				<p class = "bold"> {{plan_name}} </p>
+				{% if paid_plan%}
+					<p class = 'bold'> {{ (price | float)}}</p>
+				{% else%}
+					<p class = 'bold'> Free </p>
+				{% endif%}
+					<p> <b> Active Period: {{period}} months </b> </p>
+			</div>
+				<p class = "top-list"> {{users}} Users </p>
+				<p> Email: {{emails}} </p>
+				{% if paid_plan%}
+					<p> Save Data: {{space}} GB </p>
+				{% else%}
+					<p> Save Data: {{space}} MB </p>
+				{% endif%}
+					<p> All Modules </p>
+				{% if paid_plan%}
+					<p> Full Support </p>
+					<p> Auto Backup </p>
+				{% else%}
+					<p> No Support </p>
+					<p> No Backup </p>
+				{% endif%}
+			<div class = 'trial'>
+				{% if paid_plan%}
+					<button class = "btn blue-btn" onclick = "redirect_to_signup ('signup', '{{plan_name}}', {{period}}, {{price}})"> List </button>
+				{% else%}
+					<button class = "btn blue-btn" onclick = "redirect_to_signup ('signup', '{{plan_name}}', {{period}}, {{price}})"> Start Try </button>
+				{% endif%}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro render_demo(demo_name, login, pwd, warna) %}
+	<div class = 'col-sm-4 col-sm-offset-4'>
+		<div class = 'plan' data-plan-name = '{{demo_name}}'>
+			<div class = 'top-section plan-head {{color}}'>
+				<p> Access </p>
+				<p class = "bold"> {{demo_name}} </p>
+				<p class = 'bold'> Free </p>
+			</div>
+			<p> <b> Use to sign in: </b> </p>
+			<hr style = "margin: 0 5px">
+			<p class = "top-list"> login: <em> {{login}} </em> </p>
+			<p> password: <em> {{pwd}} </em> </p>
+			<hr style = "margin: 0 5px">
+			<p> Do not enter original data </p>
+			<p> Data will be periodically deleted </p>
+			<div class = 'trial'>
+				<a class="blue-btn button later" href="https://erp.digitalprizm.net" target="__blank"> Start a Demo </a>
+			</div>
+		</div>
+	</div>
+	
+{% endmacro %}

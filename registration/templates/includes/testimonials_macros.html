@@ -1,0 +1,48 @@
+{% macro testimonials() %}
+	
+	{% set testimonialsdata = [
+			{
+				"desc": "The main issues of SMEs are Transaction Recording, Financial Recording and How to Marketing Features in Digital Prizm is very complete starting from Recording Data, Managing Business Processes and Generating Financial Statements Financial Statements are Means of Knowing the Development of our business.
+				"customer_img": "/assets/punia_website/images/testimonials/alec.jpg",
+				"customer_name": "Afif Ridwan <br> bandengrorod.punia.online <br> Bekasi"
+			},
+			{
+				"desc": "A very helpful application when recording data, and controlling the SME business process The feature is very Complete and represents what SMEs need The Website Shop Online feature is what I really like, so easy and well controlled.",
+				"customer_img": "/assets/punia_website/images/testimonials/sonal.jpg",
+				"customer_name": "Shelly <br> salaku.punia.online <br> Bekasi"
+			},
+			{
+				"desc": "We need a system to control the business processes of our Business, we also need an online store website to market our Products.All there when we use Digital Prizm Our business is ready to go Go Modern class, Go Digital and Go Online"
+				"customer_img": "/assets/punia_website/images/testimonials/hqdefault.jpg",
+				"customer_name": "Tety Wartika <br> cemilanmakutet.punia.online <br> Tasikmalaya"
+			},
+			{
+				"desc": "Our Shopping Center Business is getting well controlled since we use punia.online Controlling stock can be done in real time We also use POS (Cash Register) available in Digital Prizm so we can sell OFFLINE and ONLINE We are ready to ride Class thanks to Digital Prizm support ",
+				"customer_img": "/assets/punia_website/images/testimonials/zel-ortiz.png",
+				"customer_name": "Ratnaningsih <br> olbek.punia.online <br> Bekasi"
+			}
+
+	]%}
+
+			{%- for testimonial in testimonialsdata -%}
+				<div class="review-section">
+					<div class="row review-box">
+						<div class="col-sm-9 testimonial-content {{ loop.cycle('', 'col-sm-push-3') }}">
+							<p class="p">
+								{{ testimonial.desc }}
+							</p>
+							<p class="text-muted review-by">
+								 {{ testimonial.customer_name }}
+							</p>
+
+						</div>
+						<div class="col-sm-3 {{ loop.cycle('', 'col-sm-pull-9') }}">
+							<p class="overflow-h text-center">
+								<img src="{{ testimonial.customer_img }}" class="img-responsive img-circle testimonial-img {{ loop.cycle('testimonial-img-right', 'testimonial-img-left') }}" />
+							</p>
+						</div>
+					</div>
+				</div>
+			{%- endfor %}
+
+{% endmacro %}

@@ -1,0 +1,45 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Organisasi Nirlaba{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Organisasi Nirlaba",
+		"People who change the world need the tools to do it! - NTEN", 			"/assets/punia_website/images/non-profit/non-profit-hero-linus.png", False) }}
+
+	{{ feature({
+			"title": "Chapters",
+			"desc": "Create local chapter of your organization and members to it. ",
+			"img": "/assets/punia_website/images/non-profit/chapter.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Donors",
+			"desc": "Maintain the list of donors helping you out in your efforts. Maintain the list of individuals as well as organizations.",
+			"img": "/assets/punia_website/images/non-profit/donors.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Volunteers",
+			"desc": "Maintain details of volunteers along with details like skillset and availability.",
+			"img": "/assets/punia_website/images/non-profit/volunteer.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Grants",
+            "desc": "Assess, approve, and disburse grants for applications made by seekers. Applicants can track the status of their grant applications on the website.",
+			"img": "/assets/punia_website/images/non-profit/grant-applications.png"
+		})
+	}}
+
+	{{ testimonial("Gladwyn Lewis", "The main problem of SMEs is Transaction Recording, Financial Recording and How to Marketing The features of Punia Online are very complete from Recording Data, Managing Business Processes and Generating Financial Statements Financial Statements are Measuring Tools for Our Business Development.", "/assets/punia_website/images/testimonials/gladwynlewis.jpg") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+{% endblock %}

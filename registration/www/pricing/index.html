@@ -1,0 +1,91 @@
+{% from "punia_website/www/pricing/macro_plan.html" import render_plan, render_demo %}
+
+<div class="container-fluid bg-white padd-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 erpnext-pricing page-padding text-center">
+				<h1 class="main-heading">Subscription Packages</h1>
+				<p class="p"> Start joining <b>Digital Prizm</b>. <br>Choose the Package that works best for your business.<br class="hidden-xs">
+				</p>
+					<!-- <hr class="col-sm-12"> -->
+				<br class="hidden-xs"></p>
+
+				<style>
+					.erpnext-pricing{
+						padding-top: 40px;
+					}
+					.plan {
+				    height: auto;
+				    border: 1px solid #f3f3f3;
+				    border-radius: 6px;
+				    padding: 6px 6px 0;
+				    margin: 0 0 40px 0;
+						background-color: #fafafa;
+					}
+					.plan-head {
+				    background-color: #FAFAFA;
+				    padding-top: 5px;
+				    padding-bottom: 5px;
+				    border-radius: 6px;
+				    /* border-bottom: 1px solid #03A9F4; */
+				    color: #fff;
+				    box-shadow: 1px 2px 4px rgba(0,0,0,0.2) inset;
+					}
+					.top-list{margin-top: 20px;}
+					.plan-0{background-color: #F3F3F3; border-bottom: 1px solid #F3F3F3; color:#333;}
+					.plan-1{background-color: #03A9F4; border-bottom: 1px solid #03A9F4;}
+					.plan-2{background-color: #cf62e2; border-bottom: 1px solid #cf62e2;}
+					.plan-3{background-color: #FF9800; border-bottom: 1px solid #FF9800;}
+					.plan-4{background-color: #8BC34A; border-bottom: 1px solid #8BC34A;}
+				</style>
+
+				<br>
+				{{ render_plan("Calendar1.png","One Month", true, 1, 1, 100, 1, 150000, "plan-1" )}}
+				{{ render_plan("Calendar3.png","Three Month", true, 3, 1, 500, 1, 425000, "plan-2" )}}
+				{{ render_plan("Calendar6.png","Six Month", true, 6, 3, 1250, 1, 800000, "plan-3" )}}
+				{{ render_plan("Calendar12.png","One Year", true, 12, 5, 3000, 1, 1500000, "plan-4" )}}
+				<br>
+
+				<p class="p">... or if you want to try it first, please use the following demo.</p>
+
+				<div>
+				{{ render_demo("Demo", "demo@digitalprizm.net", "demo", "plan-0" )}}
+				</div>
+
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 page-padding">
+					<p style="margin-top: 20px;">
+						<a href="/info-package"><b>Further information</b></a>
+					</p>
+					<p>
+						<a href="/pricing/payment"><b>Payment Options</b></a>
+					</p>
+					<p>
+						<a href="/benefits"><b>Why Digital Prizm?</b></a>
+					</p>
+					<p>
+						<a href="/compare"><b>Comparison with other applications</b></a>
+					</p>
+					<p>
+						<a href="/about#contacts"><b>Contact us</b></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function redirect_to_signup(page, plan, period, price) {
+		var url = page + '?plan=' + plan + '&period=' + period + '&price=' + price;
+		// concat existing params to url
+		url = url + window.location.search.replace('?', '&');
+		window.location.href = url;
+	}
+</script>

@@ -1,0 +1,235 @@
+{% from "punia_website/templates/includes/macros.html" import hero, render_plan %}
+
+<div class="container-fluid bg-white padd-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 erpnext-pricing page-padding text-center">
+				<h1 class="main-heading">Subscription Packages</h1>
+				<p class="p"> Start joining <b> Digital Prizm </ b>. <br> Choose the Package that works best for your business.<br class="hidden-xs">
+				</p>
+					<!-- <hr class="col-sm-12"> -->
+				<br class="hidden-xs"></p>
+				<div class="col-sm-12 page-padding box-paket-1">
+					<div class='text-center'>
+						<img class="main-illustration" src='/assets/punia_website/img/Calendar1.png' style='width:150px'>
+					</div>
+					<h2 style='color:white'>Package<br><span class="plan-title h2">Wulan</span></h2>
+					<p class="p price" style='color:white'>Rs 150,000
+						<span class="small"><br>1 month subscription</span>
+					</p>
+					<div class="row text-center">
+						<div class="plan-detail col-sm-12-">
+							<p><span class="indicator green"></span>1 Month Active Period</p>
+							<p><span class="indicator green"></span>1 User</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>1GB Space</p>
+							<p><span class="indicator green"></span>All Modules</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>Full support</p>
+							<p><span class="indicator green"></span>Automatic Backup</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'P5-2018')">Joining</a>
+				</div>
+				<!-- <div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div> -->
+				<div class="col-sm-12 page-padding box-paket-2">
+					<div class='text-center'>
+						<img class="main-illustration" src='/assets/punia_website/img/Calendar3.png' style='width:150px'>
+					</div>
+					<h2 style='color:white'>Package<br><span class="plan-title h2">Quarter</span></h2>
+					<p class="p price" style='color:white'>Rs 425.000
+						<span class="small"><br>3 month subscription</span>
+					</p>
+					<div class="row text-center">
+						<div class="plan-detail col-sm-12">
+							<p><span class="indicator green"></span>3 Month Active Period</p>
+							<p><span class="indicator green"></span>3 Users</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>1GB Space</p>
+							<p><span class="indicator green"></span>All Modules</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>Full support</p>
+							<p><span class="indicator green"></span>Automatic Backup</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'P5-2018')">Joining</a>
+				</div>
+				<!-- <div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div> -->
+				<div class="col-sm-12 page-padding box-paket-3">
+					<div class='text-center'>
+						<img class="main-illustration" src='/assets/punia_website/img/Calendar6.png' style='width:150px'>
+					</div>
+					<h2 style='color:white'>Package<br><span class="plan-title h2">Semester</span></h2>
+					<p class="p price" style='color:white'>Rp 800.000
+						<span class="small"><br>Subscription 6 months</span>
+					</p>
+					<div class="row text-center">
+						<div class="plan-detail col-sm-12">
+							<p><span class="indicator green"></span>6 Month Active Period</p>
+							<p><span class="indicator green"></span>3 Users</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>1GB Space </p>
+							<p><span class="indicator green"></span>All Modules</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>Full support</p>
+							<p><span class="indicator green"></span>Automatic Backup</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'P5-2018')">Joining</a>
+				</div>
+				<!-- <div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div> -->
+				<div class="col-sm-12 page-padding box-paket-4">
+					<div class='text-center'>
+						<img class="main-illustration" src='/assets/punia_website/img/Calendar612.png' style='width:150px'>
+					</div>
+					<h2 style='color:white'>Package<br><span class="plan-title h2">Year</span></h2>
+					<p class="p price" style='color:white'>Rs 1.500.000
+						<span class="small"><br>12 month subscription</span>
+					</p>
+					<div class="row text-center">
+						<div class="plan-detail col-sm-12">
+							<p><span class="indicator green"></span>12 Month Active Period</p>
+							<p><span class="indicator green"></span>5 User</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>1GB Space</p>
+							<p><span class="indicator green"></span>All Modules</p>
+						<!-- </div>
+						<div class="plan-detail col-sm-4"> -->
+							<p><span class="indicator green"></span>Full Supoort</p>
+							<p><span class="indicator green"></span>Automatic Backup</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'P5-2018')">Joining</a>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12 mar-b-50">
+						</div>
+					</div>
+				</div>
+
+				<p class="p ">... or if you want to try first, please select the following package.</p>
+				<div class="col-sm-8 col-sm-offset-2 page-padding box-paket-0 paket-0">
+					<!-- <div class='text-center'>
+						<img class="main-illustration" src='/assets/punia_website/img/Calendar-01.png' style='width:150px'>
+					</div> -->
+					<h2>Paket<br><span class="h2">Trial</span></h2>
+					<p class="p price">Free
+						<span class="small text-muted">
+						<!-- <br>Paket untuk anda coba</span> -->
+					</p>
+					<div class="row text-center">
+						<div class="plan-detail col-sm-4">
+							<p><span class="indicator green"></span>1 Month Active Period</p>
+							<p><span class="indicator green"></span>1 User</p>
+						</div>
+						<div class="plan-detail col-sm-4">
+							<p><span class="indicator green"></span>10MB Space</p>
+							<p><span class="indicator green"></span>All Modules</p>
+						</div>
+						<div class="plan-detail col-sm-4">
+							<p><span class="indicator green"></span>Without Support</p>
+							<p><span class="indicator green"></span>No Backups</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'Free-Trial')">Start Try</a>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-4 col-sm-8 col-sm-offset-2">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div>
+				<div class = "col-sm-12 page-padding">
+					<p style = "margin-top: 20px;">
+						<a href="/info-paket"> <b> More Information </ b> </a>
+					</p>
+					<p>
+						<a href="/pricing/payment"> <b> Payment Options </ b> </a>
+					</p>
+					<p>
+						<a href="/faat"> <b> Why Digital Prizm? </ b> </a>
+					</p>
+					<p>
+						<a href="/compare"> <b> Comparison with other apps </ b> </a>
+					</p>
+					<p>
+					<a href="/about #contact"> <b> Contact Us </ b> </a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function redirect_to_signup(page, plan) {
+		var url = page + '?plan=' + plan;
+		// concat existing params to url
+		url = url + window.location.search.replace('?', '&');
+		window.location.href = url;
+	}
+</script>
+<style>
+	.box-paket-0{background-color:#fcfcfc; box-shadow: 0px 0px 6px lightgray; border-radius: 6px;}
+	.box-paket-1{background-color:#03A9F4; box-shadow: 0px 0px 6px lightgray; border-radius: 6px; width: calc((100% - 60px)/4); margin-right: 10px;}
+	.box-paket-2{background-color:#cf62e2; box-shadow: 0px 0px 6px lightgray; border-radius: 6px; width: calc((100% - 60px)/4); margin: 0 10px;}
+	.box-paket-3{background-color:#FF9800; box-shadow: 0px 0px 6px lightgray; border-radius: 6px; width: calc((100% - 60px)/4); margin: 0 10px;}
+	.box-paket-4{background-color:#8BC34A; box-shadow: 0px 0px 6px lightgray; border-radius: 6px; width: calc((100% - 60px)/4); margin-left: 10px;}
+	.plan-title{font-size: 24px; font-weight: 600; color:#fff}
+	.plan-detail{font-size: 12px; color:black!important;}
+	.price{font-size: 24px;}
+	.price .small{font-size: 14px;}
+	/* .paket-0{color:black!important;}
+	.paket-1{color:white!important;}
+	.paket-2{color:white!important;}
+	.paket-3{color:white!important;}
+	.paket-4{color:white!important;} */
+@media (min-width: 768px) and (max-width: 991px){
+	.box-paket-1{width: calc((100% - 40px)/2); margin: 0 20px 20px 0;}
+	.box-paket-2{width: calc((100% - 40px)/2); margin: 0 0 20px 20px;}
+	.box-paket-3{width: calc((100% - 40px)/2); margin: 20px 20px 0 0;}
+	.box-paket-4{width: calc((100% - 40px)/2); margin: 20px 0 0 20px;}
+	.plan-title{font-size: 30px; font-weight: 600;}
+	.plan-detail p{margin: 0;}
+}
+@media (max-width: 767px){
+	.box-paket-1{width: 100%; margin: 0 0 20px 0;}
+	.box-paket-2{width: 100%; margin: 20px 0 20px 0;}
+	.box-paket-3{width: 100%; margin: 20px 0 20px 0;}
+	.box-paket-4{width: 100%; margin: 20px 0 0 0;}
+	.plan-title{font-size: 30px; font-weight: 600;}
+	.plan-detail p{margin: 0;}
+}
+</style>

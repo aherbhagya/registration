@@ -1,0 +1,71 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero %}
+{% from "punia_website/templates/includes/testimonials_macros.html" import testimonials %}
+
+{% block title %}Testimonials{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row section-block">
+					<div class="col-md-12 text-center">
+						<h1>The opinion of SMEs on Punia</h1>
+						<p class='lead text-muted'>Used by +1 UKM Indonesia</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{ testimonials() }}
+
+		<div class="container-fluid section-block feature-section">
+			<div class="container text-center">
+				<h2>Independent Reviews</h2>
+				<div class=row>
+					<div class='col-md-4 col-sm-12'>
+						<p><img src='/assets/punia_website/images/testimonials/stars.png' style='max-width: 120px'></p>
+						<p class=text-muted><a href='http://www.softwareadvice.com/erp/erpnext-profile/'>SoftwareAdvice.com</a></p>
+					</div>
+					<div class='col-md-4 col-sm-12'>
+						<p><img src='/assets/punia_website/images/testimonials/stars.png' style='max-width: 120px'></p>
+						<p class=text-muted><a href='https://www.getapp.com/operations-management-software/a/iwebnotes/'>Capterra.com</a></p>
+					<p>
+					</div>
+					<div class='col-md-4 col-sm-12'>
+						<p><img src='/assets/punia_website/images/testimonials/stars.png' style='max-width: 120px'></p>
+						<p class=text-muted><a href='https://www.g2crowd.com/products/erpnext/reviews'>G2Crowd.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container-fluid section-block feature-section">
+			<div class="container text-center">
+				<p class="lead">Follow those who are already using Punia.
+					<br>
+				</p>
+				<!-- <p>
+                    <a class="x-large blue-btn button later" href="/signup?plan=Free">
+                        Sign Up - Free for 1 User</a>
+                </p> -->
+				<p>
+					<a href="/pricing" class="x-large blue-btn button later">sSee More Packages</a>
+				</p>
+			</div>
+		</div>
+
+
+		<script>
+			frappe.ready(function(){
+				$(".hero-and-content .container:first").removeClass('container');
+			})
+		</script>
+
+{% endblock %}

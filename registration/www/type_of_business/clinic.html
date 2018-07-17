@@ -1,0 +1,52 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Kesehatan{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Kesehatan",
+		"Healing Touch to Healthcare Management", 			"/assets/punia_website/images/healthcare/patient-appointment.png", False) }}
+
+	{{ feature({
+			"title": "Patient and Appointment",
+			"desc": "Maintain Patient's details. Create new Appointments and Consultation for Patients.",
+			"img": "/assets/punia_website/images/healthcare/healthcare-hero-patient.png"
+		})
+	}}
+
+	{{ feature({
+		"title": "Physician Schedule",
+		"desc": "Create schedules for physicians in a jiffy.",
+		"img": "/assets/punia_website/images/healthcare/physician-schedule.gif"
+		})
+	}}
+
+	{{ feature({
+			"title": "Consultation",
+			"desc": "Record patient encounters with the Consultation document. Manage the Assessments, Prescriptions, and Medical Coding from a single place.",
+			"img": "/assets/punia_website/images/healthcare/patient-consultation.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Lab Tests",
+			"desc": "Manage a clinical laboratory by entering Lab Tests and print or email test results, manage collected samples, and create Invoices.",
+			"img": "/assets/punia_website/images/healthcare/lab-test.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Appointment Analysis",
+			"desc": "See what your appointments tell you about your doctors and departments. The appointment analytics tool gives you greater insight into the appointments being made by the patients.",
+			"img": "/assets/punia_website/images/healthcare/appointment-analytics.png"
+		})
+	}}
+
+	{{ testimonial("Gladwyn Lewis", "The main problem of SMEs is Transaction Recording, Financial Recording and How to Marketing The features of Punia Online are very complete from Recording Data, Managing Business Processes and Generating Financial Statements Financial Statements are Measuring Tools for Our Business Development.", "/assets/punia_website/images/testimonials/gladwynlewis.jpg") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+{% endblock %}

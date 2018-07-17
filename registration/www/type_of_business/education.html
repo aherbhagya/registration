@@ -1,0 +1,54 @@
+	{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Pendidikan{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	{{ hero("Pendidikan",
+		"One Less Thing to Learn",
+		"/assets/punia_website/images/schools/school-hero.png", False) }}
+
+	{{ feature({
+			"title": "Student Data",
+			"desc": "Have a secure place to collect and store all student data. Enrollment, parent’s info, address, sibling info, course material, course schedule, mark sheets and attendance. Find all the info you need about anyone instantly.",
+			"img": "/assets/punia_website/images/schools/student_data.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Attendance",
+			"desc": "Mark attendance and track it easily. Let teachers focus on lessons by making attendance super quick. Easily drawing reports from data and also share with parents.",
+			"img": "/assets/punia_website/images/schools/attendance.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Admissions",
+			"desc": "Efficiently manage entire school’s admission process by taking it online. Make it convenient for applying parents to go through your admission procedure. Receive applications centrally and make sure the most fit applications pass through. ",
+			"img": "/assets/punia_website/images/schools/admission.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Assessments",
+			"desc": "Publish tests, assignments and homework to students with instructions and due dates. Be sure who submitted the answers and assess each one easily. No data entry effort and no room for error.",
+			"img": "/assets/punia_website/images/schools/assessment.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Fee Collection",
+			"desc": "Collect and manage fees in a convenient way. Always know who has paid and who as not, publish fee collection dates and send automatic reminders to concerned students. No data entry hassles.",
+			"img": "/assets/punia_website/images/schools/fees.png"
+		})
+	}}
+
+	{{ testimonial("Manoj Thandassery "," The main issues of SMEs are Transaction Recording, Financial Recording and How to Marketing. Features on Punia Online is very complete from Recording Data, Managing Business Processes and Generating Financial Statements. Financial Statement is a Measure Tool to know the development of our business.", "/assets/punia_website/images/testimonials/manoj.png") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+
+{% endblock %}

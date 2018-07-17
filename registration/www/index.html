@@ -1,0 +1,288 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, testimonial %}
+
+{% block title %}Digital Prizm{% endblock %}
+
+{% block head_include %}
+  <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+	<meta name="description" content="Punia adalah platform online pengelolaan dan pembinaan UMKM dan Koperasi. Digital Prizm mendukung proses usaha produksi, perdagangan grosir dan eceran, jasa, pendidikan, kesehatan, dan organisasi nirlaba" />
+	<meta name="keywords" content="UKM, UMKM, Koperasi, ERP Software, Cloud ERP, Accounting Software, Online ERP, Online Accounting, ERP for small business" />
+  <style>{% include "templates/includes/custom.css" %}</style>
+  <style>
+    .section-block{padding-bottom: 0;}
+    .screenshot{box-shadow:none; border:none;}
+  </style>
+
+{% endblock %}
+
+{% block content %}
+<!-- Activate this block if using hero from macro -->
+	<!-- {{ hero("Digital Prizm",	"Digital Prizm adalah platform online terpadu untuk UMKM mengelola usaha <br>dan untuk Pembina  memantau pembinaan UMKM.", "/assets/punia_website/img/online-store.png", True)}} -->
+<!-- end of hero block -->
+<!-- Activate this block if not using hero from macro -->
+	<section class='hero text-center' style="padding-bottom: 0;">
+    <style>
+      .main-illustration{width: 100%; height: auto; min-height: 0px!important; margin:0 0 30px 0!important;}
+      .small-note{font-size: 12px;}
+      .small-content img{width: 180px!important;}
+    </style>
+		<div class='text-center'>
+			<img class="main-illustration" src='/assets/punia_website/img/main-image.png'>
+		</div>
+    <h1 class="main-heading"> Digital Prizm </h1>
+    <h1 class="hero-title"><span class="what">Operational Enterprises</span></h1>
+		<p class='lead'>Digital Prizm is an integrated online platform for SMEs managing business <br> and for supervisors monitoring MSE coaching.</p>
+		<p class="mar-t-50 mar-b-50">
+      <a class="x-large blue button" onclick="redirect_to_signup('signup', 'Coba', 1, 0)" style="font-size: 20px">Try Used 14 Days</a>
+      <p>
+        <a href="/pricing" class="cl-light-gray" style="font-size:15px;">See More Pricing Packages</a>
+      </p>
+		</p>
+  </section>
+<!-- end of non-hero block -->
+
+<div class="col-sm-12">
+  <div class="row">
+      <hr class="col-sm-12">
+  </div>
+</div>
+
+<div class="group later">
+	<div class="row section text-center">
+		<div class="col-sm-12">
+			<div class="dashboard-section">
+				<h1 class="h2">Operations, Bookkeeping,<br class="visible-xs hidden-sm"> Website,<br class="hidden-xs visible-sm"> ... Complete</h1>
+				<p class="p">Digital Prizm covers all SME business processes in running business operations, from Production, Marketing, Sales, Purchasing, Personnel, Projects, Finance, to Websites and Online Stores.</p>
+        <span class="text-extra-muted small">(click Tab to see more animations)</span>
+			</div>
+			<div class="chrome-tabs" data-chrome-tabs-instance-id="0">
+				<div class="chrome-tabs-content">
+
+				</div>
+				<div class="chrome-tabs-bottom-bar" style="z-index: 3;"></div>
+				<!-- Styles to prevent flash after JS initialization -->
+				<style>
+					.chrome-tabs .chrome-tab {
+						width: 243px
+					}
+
+					.chrome-tabs .chrome-tab:nth-child(1) {
+						transform: translate3d(0px, 0, 0)
+					}
+
+					.chrome-tabs .chrome-tab:nth-child(2) {
+						transform: translate3d(229px, 0, 0)
+					}
+				</style>
+				<style>
+					.chrome-tabs[data-chrome-tabs-instance-id="0"] .chrome-tab:nth-child(1) {
+						transform: translate3d(0px, 0, 0)
+					}
+
+					.chrome-tabs[data-chrome-tabs-instance-id="0"] .chrome-tab:nth-child(2) {
+						transform: translate3d(229px, 0, 0)
+					}
+				</style>
+			</div>
+
+			<div class="tab-content">
+				<img src="/assets/punia_website/images/home/new-item.gif"
+					class="img-responsive image-1">
+				<img src="/assets/punia_website/images/home/new-customer.gif"
+					class="img-responsive image-2">
+				<img src="/assets/punia_website/images/home/new-sales-inv.gif"
+					class="img-responsive image-3">
+				<img src="/assets/punia_website/images/home/new-material-req.gif"
+					class="img-responsive image-4">
+			</div>
+		</div>
+
+    <div class="col-sm-12 mar-t-50 mar-b-50">
+      <div class="row">
+          <hr class="col-sm-12">
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="dashboard-section">
+        <h1 class="h2">Integrated Coaching</h1>
+        <p class="p">Digital Prizm is an integrated SME Operational Platform with Dashboard Builder which is used to monitor the development and progress of SMEs.</p>
+        <img src="/assets/punia_website/img/kord-dashboard.png" style="width: 1200px;">
+        <!-- <span class="small-note">(klik Tab untuk melihat animasi lainnya)</span> -->
+      </div>
+    </div>
+	</div>
+</div>
+
+<div class="group later">
+	<div class="row section text-center">
+		<div class="col-sm-12">
+			<div class="dashboard-section">
+        <h1 class="h1">5 Steps of Punia</h1>
+        <p class="p">The Five Stages of Digital Transformation to SMEs goes to class.</p>
+      </div>
+
+      <div class="row" style="margin-top:60px;">
+    		<div class="col-sm-6 small-content">
+    			<img src="/assets/punia_website/img/tahap-kenal.png">
+    			<h2>1. Know Yourself</h2>
+    			<p>At this stage, SME entrepreneurs need to know themselves and their businesses, such as the type of business, the legality required, the business partners, the source of raw materials, the marketing area, and others. This information will form the basic profile of SMEs.</p>
+    			<!-- <a href="/pricing">See plans for details</a> -->
+    		</div>
+    		<div class="col-sm-6 small-content">
+    			<img src="/assets/punia_website/img/tahap-data.png">
+    			<h2>2. Record the Data</h2>
+    			<p>The next step is to record every business-related static data, such as a list of goods, a list of prices, a list of customers, a list of suppliers, and a list of employees. This static data will be useful in recording transactions at a later stage.</p>
+    			<!-- <a href="https://discuss.erpnext.com" target="_blank">Visit the forum</a> -->
+    		</div>
+      </div>
+
+      <div class="row" style="margin-top:60px;">
+    		<div class="col-sm-6 small-content">
+    			<img src="/assets/punia_website/img/tahap-transaksi.png">
+    			<h2>3. Record Transactions</h2>
+    			<p>Complete the recording, at this stage carried out recording transactions such as purchase transactions, sales, inventory counting, employee payroll, and so forth. Recording of transactions is done in stages in accordance with the needs and abilities of SMEs. </p>
+    			<!-- <a href="/download">Download ERPNext free</a> -->
+    		</div>
+        <div class="col-sm-6 small-content">
+    			<img src="/assets/punia_website/img/tahap-proses.png">
+    			<h2>4. Business Process</h2>
+    			<p>If static data and transactions are well-documented, SME management can be improved by implementing a structured and systematic business process. The important thing in the implementation of business processes is discipline and consistent in running and taking note.</p>
+    			<!-- <a href="https://discuss.erpnext.com" target="_blank">Visit the forum</a> -->
+    		</div>
+      </div>
+
+      <div class="row" style="margin-top:60px;">
+        <div class="col-sm-6 col-sm-offset-3 small-content">
+    			<img src="/assets/punia_website/img/tahap-analisis.png">
+    			<h2>5. Reports & Analysis</h2>
+    			<p>The last stage is to make operational and financial reports. Using these reports SME players can conduct business analyzes that will further support the development and progress of their business.</p>
+    			<!-- <a href="https://discuss.erpnext.com" target="_blank">Visit the forum</a> -->
+    		</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+ 
+{{testimonial ("Sonal Ramnathkar", "After evaluating a bunch of ERPs including TCS, Tally and many others, I finally found the right ERP for me furniture manufacturing startup. <strong> I love using ERPNext and recommend it to any discrete manufacturing company </ strong> "," /assets/punia_website/images/testimonials/sonal.jpg ")}}
+
+<style>
+  .testimonial{
+    background-color: #fafbfc;
+    border: 1px solid #d1d8dd;
+    border-radius: 4px;
+    padding: 40px 0 20px 0;
+    margin: -5px 0 20px 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  .testimonial-content .p{
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 20px;
+  }
+</style>
+
+<div class="col-sm-12 mar-t-50 mar-b-50">
+  <div class="col-sm-6">
+    <p class="p text-center">Let's join together <a href="/umkm">+1 UMKM</a> 
+	who has stepped up his efforts with Digital Prizm
+    </p>
+  </div>
+  <div class="col-sm-6">
+    <p class="p text-center">
+      <a class="x-large blue-btn button later" href="/pricing" style="font-size: 20px;">
+      View Full Package</a>
+    </p>
+  </div>
+</div>
+
+	<script src="/assets/punia_website/js/draggabilly.js"></script>
+	<script src="/assets/punia_website/js/chrome-tabs.js"></script>
+	<script>
+		frappe.ready(function() {
+
+			var el = document.querySelector('.chrome-tabs')
+			window.chromeTabs = new ChromeTabs()
+			chromeTabs.init(el, {
+				tabOverlapDistance: 14,
+				minWidth: 45,
+				maxWidth: 243
+			});
+
+			let tabs = [
+				{ title: 'Product', image: '.image-1' },
+				{ title: 'Customer', image: '.image-2' },
+				{ title: 'Sales invoice', image: '.image-3' },
+				{ title: 'Material Requests', image: '.image-4' }
+			];
+
+			for (const tab of tabs) {
+				chromeTabs.addTab({
+					title: tab.title,
+					favicon: '/assets/punia_website/img/favicon.ico'
+				})
+			}
+
+			chromeTabs.setCurrentTab($('.chrome-tab:first-child').get(0));
+
+			$('.tab-content img').not(':first-child').hide();
+
+			$(el).on('activeTabChange', ({ detail }) => {
+				const $tab = $(detail.tabEl);
+				const title = $tab.find('.chrome-tab-title').text();
+				const image = tabs.find(tab => tab.title === title).image;
+
+				$('.tab-content img').hide();
+				$('.tab-content').find(image).show();
+			});
+
+			var seen = [];
+			var last = 0;
+			setInterval(function() {
+				var whats = [
+					'Production', 'Marketing', 'Sale', 'Inventory', 'Purchase', 'Finance', 'Personnel', 'Shop', 'Website', 'Project'
+				];
+
+				if(seen.length == whats.length) {
+					seen = []
+				}
+
+				var index = parseInt(Math.random() * whats.length);
+				while(seen.includes(index) || last == index) {
+					index = parseInt(Math.random() * whats.length);
+				}
+
+				var what = whats[index];
+
+				seen.push(index);
+				last = index;
+
+				var start = 0;
+				for(var i = 0; i < what.length; i++) {
+					var text = what.substr(0, i + 1);
+					start += 50 + Math.random() * 50;
+					show_text(text, start);
+				}
+
+
+			}, 3000)
+
+			function show_text(text, timeout) {
+				setTimeout(() => {
+					$('.what').text(text);
+				}, timeout)
+			}
+		})
+	</script>
+  <script>
+  function redirect_to_signup(page, plan, period, price) {
+		var url = page + '?plan=' + plan + '&period=' + period + '&price=' + price;
+  		// concat existing params to url
+  		url = url + window.location.search.replace('?', '&');
+  		window.location.href = url;
+  	}
+  </script>
+
+{% endblock %}

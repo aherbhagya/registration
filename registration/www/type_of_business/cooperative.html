@@ -1,0 +1,54 @@
+{% extends "punia_website/templates/base.html" %}
+{% from "punia_website/templates/includes/macros.html" import hero, feature, testimonial %}
+
+{% block title %}Koperasi{% endblock %}
+
+{% block head_include %}
+	 <link href="/assets/punia_website/css/web_theme.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+	{{ hero("Koperasi",
+		"Manage and Grow Your Koperasi Business", 		"/assets/punia_website/images/distribution/hero.jpg", False) }}
+
+	{{ feature({
+			"title": "Inventory",
+			"desc": "You can setup your inventory Warehouses and manage the Stock of your Items Batchwise or by Serial Numbers. Easily manage multiple inventory locations. Track inventory levels per warehouse and update based on manual inspection.",
+			"img": "/assets/punia_website/images/distribution/distrubution_1_inventory.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Sales and Purchase",
+			"desc": "You can track communication with your Leads or Customers. Keep engaging with them by sending newsletter once in awhile and send specific Quotations when they are ready to order. Keep track of items to buy by raising Material Requests, send Purchase Orders to your suppliers and enter Purchase Receipts when you receive material.",
+			"img": "/assets/punia_website/images/industries/purchase-order.png"
+		})
+	}}
+
+	{{ feature({
+			"title": "Billing and Receivables",
+			"desc": "Billing and receivables tracking helps you stay on top of your finances. Specific Project, customer or product based filtering helps you get the profitability of each factor on your fingertip.",
+			"img": "/assets/punia_website/images/distribution/distrubution_3_billing.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "HR and Payroll",
+			"desc": "Your employees can apply for leaves and claim expenses directly through ERPNext. All of this is seamlessly integrated with your payroll and accounting, also helps you manage recruiting, appraisals, training and much more.",
+			"img": "/assets/punia_website/images/distribution/distrubution_4_hr.jpg"
+		})
+	}}
+
+	{{ feature({
+			"title": "Auto Re-ordering",
+			"desc": "When the stock goes below threshold quantity - Automatically raise material requests, send purchase orders to suppliers and record purchase receipts. Carry out effective stock management always have enough supply at hand.",
+			"img": "/assets/punia_website/images/distribution/distrubution_5_autoreorder.jpg"
+		})
+	}}
+
+	{{ testimonial("Gladwyn Lewis"," The main issues of SMEs are Transaction Recording, Financial Recording and How to Marketing. Features on Punia Online is very complete from Recording Data, Managing Business Processes and Generating Financial Statements. Financial Statement is a Measure Tool to know the development of our business.", "/assets/punia_website/images/testimonials/gladwynlewis.jpg") }}
+
+	{% include("punia_website/templates/includes/industry_footer.html") %}
+
+{% endblock %}
